@@ -1,5 +1,6 @@
 
 -- Initial query: Get all bookings with user, property, and payment details
+-- Initial query: Get all confirmed bookings with user, property, and payment details
 EXPLAIN
 SELECT 
     b.booking_id,
@@ -23,8 +24,9 @@ SELECT
 FROM Booking b
 JOIN "User" u ON b.user_id = u.user_id
 JOIN Property p ON b.property_id = p.property_id
-JOIN Payment pay ON pay.booking_id = b.booking_id;
-
+JOIN Payment pay ON pay.booking_id = b.booking_id
+WHERE b.status = 'confirmed'
+AND pay.amount > 0;
 
 
 
