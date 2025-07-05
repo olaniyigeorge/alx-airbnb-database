@@ -18,23 +18,22 @@ VALUES
 -- Bookings by guests: Chinaza and Amaka
 INSERT INTO Booking (booking_id, property_id, user_id, start_date, end_date, total_price, status)
 VALUES
-  ('book-aaaa-1111-aaaa-000000000001', 'aaaa1111-aaaa-4aaa-aaaa-aaaaaaaaaaaa', '11111111-aaaa-4aaa-bbbb-111111111111', '2025-07-10', '2025-07-15', 1250.00, 'confirmed'),
-  ('book-bbbb-2222-bbbb-000000000002', 'bbbb2222-bbbb-4bbb-bbbb-bbbbbbbbbbbb', '33333333-cccc-4ccc-dddd-333333333333', '2025-08-01', '2025-08-03', 240.00, 'pending');
-
+  ('550e8400-e29b-41d4-a716-446655440001', 'aaaa1111-aaaa-4aaa-aaaa-aaaaaaaaaaaa', '11111111-aaaa-4aaa-bbbb-111111111111', '2025-07-10', '2025-07-15', 1250.00, 'confirmed'),
+  ('550e8400-e29b-41d4-a716-446655440002', 'bbbb2222-bbbb-4bbb-bbbb-bbbbbbbbbbbb', '33333333-cccc-4ccc-dddd-333333333333', '2025-08-01', '2025-08-03', 240.00, 'pending');
 -- Payments for bookings
 INSERT INTO Payment (payment_id, booking_id, amount, payment_method)
 VALUES
-  ('pay-aaaa-0001-aaaa-pay', 'book-aaaa-1111-aaaa-000000000001', 1250.00, 'credit_card');
+  ('550e8400-e29b-41d4-a716-pay000000001', '550e8400-e29b-41d4-a716-446655440001', 1250.00, 'credit_card');
 
 -- Reviews left by guests
 INSERT INTO Review (review_id, property_id, user_id, rating, comment)
 VALUES
-  ('rev-aaaa-0001-revv-aaaa', 'aaaa1111-aaaa-4aaa-aaaa-aaaaaaaaaaaa', '11111111-aaaa-4aaa-bbbb-111111111111', 5, 'Beautiful apartment! Host was very responsive. Highly recommend.'),
-  ('rev-bbbb-0002-revv-bbbb', 'bbbb2222-bbbb-4bbb-bbbb-bbbbbbbbbbbb', '33333333-cccc-4ccc-dddd-333333333333', 4, 'Great escape from the city. Peaceful and well-kept.');
+  ('550e8400-e29b-41d4-a716-rev000000001', 'aaaa1111-aaaa-4aaa-aaaa-aaaaaaaaaaaa', '11111111-aaaa-4aaa-bbbb-111111111111', 5, 'Beautiful apartment! Host was very responsive. Highly recommend.'),
+  ('550e8400-e29b-41d4-a716-rev000000002', 'bbbb2222-bbbb-4bbb-bbbb-bbbbbbbbbbbb', '33333333-cccc-4ccc-dddd-333333333333', 4, 'Great escape from the city. Peaceful and well-kept.');
 
 -- Messages exchanged between guest and host
 INSERT INTO Message (message_id, sender_id, recipient_id, message_body)
 VALUES
-  ('msg-aaaa-0001-mmm1', '11111111-aaaa-4aaa-bbbb-111111111111', '22222222-bbbb-4bbb-cccc-222222222222', 'Hi Tunde, I’m interested in your Lekki apartment. Is it available next weekend?'),
-  ('msg-bbbb-0002-mmm2', '22222222-bbbb-4bbb-cccc-222222222222', '11111111-aaaa-4aaa-bbbb-111111111111', 'Hi Chinaza, yes it is! Let me know if you need anything before booking.'),
-  ('msg-cccc-0003-mmm3', '33333333-cccc-4ccc-dddd-333333333333', '22222222-bbbb-4bbb-cccc-222222222222', 'Tunde, your cabin looks amazing. Can I bring pets?');
+  ('550e8400-e29b-41d4-a716-msg000000001', '11111111-aaaa-4aaa-bbbb-111111111111', '22222222-bbbb-4bbb-cccc-222222222222', 'Hi Tunde, Im interested in your Lekki apartment. Is it available next weekend?'),
+  ('550e8400-e29b-41d4-a716-msg000000002', '22222222-bbbb-4bbb-cccc-222222222222', '11111111-aaaa-4aaa-bbbb-111111111111', 'Hi Chinaza, yes it is! Let me know if you need anything before booking.'),
+  ('550e8400-e29b-41d4-a716-msg000000003', '33333333-cccc-4ccc-dddd-333333333333', '22222222-bbbb-4bbb-cccc-222222222222', 'Tunde, your cabin looks amazing. Can I bring pets?');

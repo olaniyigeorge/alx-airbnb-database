@@ -9,7 +9,7 @@ CREATE TYPE booking_status AS ENUM ('pending', 'confirmed', 'canceled');
 CREATE TYPE payment_method_enum AS ENUM ('credit_card', 'paypal', 'stripe');
 
 -- User Table
-CREATE TABLE User (
+CREATE TABLE "User" (
     user_id UUID PRIMARY KEY,
     first_name VARCHAR NOT NULL,
     last_name VARCHAR NOT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE Message (
 );
 
 -- Indexes (some are created implicitly, these are additional)
-CREATE INDEX idx_user_email ON User (email);
+CREATE INDEX idx_user_email ON "User" (email);
 CREATE INDEX idx_property_host_id ON Property (host_id);
 CREATE INDEX idx_booking_property_id ON Booking (property_id);
 CREATE INDEX idx_booking_user_id ON Booking (user_id);
