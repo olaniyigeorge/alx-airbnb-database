@@ -21,7 +21,8 @@ SELECT
     r.rating,
     r.comment
 FROM Property p
-LEFT JOIN Review r ON p.property_id = r.property_id;
+LEFT JOIN Review r ON p.property_id = r.property_id
+ORDER BY r.rating DESC NULLS LAST, p.name ASC;
 
 -- Retrieve all users and all bookings even if they have no bookings or no users
 SELECT
@@ -34,4 +35,5 @@ SELECT
     b.start_date,
     b.end_date
 FROM "User" u
-FULL OUTER JOIN Booking b ON u.user_id = b.user_id;
+FULL OUTER JOIN Booking b ON u.user_id = b.user_id
+ORDER BY u.first_name ASC, b.start_date DESC;
